@@ -9,5 +9,6 @@ before_script:
   - nohup python flask-ip.py & 
   
 script:
+  - ifconfig
   - curl http://localhost:5000/
   - curl http://localhost:5000/get_my_ip
