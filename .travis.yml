@@ -1,0 +1,11 @@
+language: python
+python:
+  - "2.7"
+
+install:
+  - pip install flask
+  
+script:
+    - nohup python flask-ip.py &
+    - curl http://localhost:5000/
+    - curl http://localhost:5000/get_my_ip
