@@ -8,7 +8,6 @@ dependencies:
 
 test:
   override:
-    - ls
-    - python  flask-test-app/flask-ip.py &
+    - python flask-ip.py &
     - curl http://localhost:5000/
     - curl http://localhost:5000/get_my_ip
