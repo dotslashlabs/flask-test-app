@@ -1,0 +1,12 @@
+machine:
+  python:
+    version: 2.7.5
+    
+dependencies:
+  post:
+    - pip install flask
+
+test:
+  override:
+    - curl http://localhost:5000/
+    - curl http://localhost:5000/get_my_ip
