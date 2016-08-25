@@ -5,8 +5,9 @@ python:
 install:
   - pip install flask
   
+before_script:
+  - nohup python flask-ip.py & 
+  
 script:
-    - ls
-    - nohup python flask-ip.py &
-    - curl http://localhost:5000/
-    - curl http://localhost:5000/get_my_ip
+  - curl http://localhost:5000/
+  - curl http://localhost:5000/get_my_ip
