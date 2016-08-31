@@ -6,4 +6,7 @@ install:
   - pip install flask
   
 script:
-  - bash test.sh
+  - nohup python get_ip.py &
+  - sleep 1
+  - python get_ip_unittests.py
+  - python get_ip_functests.py 
