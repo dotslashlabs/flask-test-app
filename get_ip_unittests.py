@@ -13,8 +13,6 @@ class GetIPTestCase(unittest.TestCase):
 
     def test_local_ip(self):
         response = self.app.get('/get_my_ip')
-        print response._status_code
-#        ip = json.loads(response)
         assert response._status_code == 200
 
 if __name__ == '__main__':
